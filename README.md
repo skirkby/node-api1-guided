@@ -51,7 +51,7 @@ The Web API must provide a set of `endpoints` to fulfill the following needs:
 Here is a table with the `endpoint` descriptions:
 
 | Action               | URL               | Method | Response         |
-| :------------------- | :---------------- | :----- | :--------------- |
+|:---------------------|:------------------|:-------|:-----------------|
 | Add a Lesson         | /api/lessons      | POST   | the new Lesson   |
 | View list of Lessons | /api/lessons      | GET    | array of Lessons |
 | View Lesson details  | /api/lessons/{id} | GET    | a Lesson         |
@@ -62,3 +62,8 @@ Here is a table with the `endpoint` descriptions:
 | View Hub details     | /api/hubs/{id}    | GET    | a Hub            |
 | Update Hub           | /api/hubs/{id}    | PATCH  | updated Hub      |
 | Remove a Hub         | /api/hubs/{id}    | DELETE | deleted Hub      |
+
+## Files with notes:
+- ./index.js
+- ./Postman-notes.md
+- ./npm.notes.md
