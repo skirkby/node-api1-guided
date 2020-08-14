@@ -58,7 +58,7 @@ server.use(express.json());
 // they are shorter.
 //
 // Every method+route handler will get a callback that takes at least 2
-// parameters: req and res. (We will learn later about other possibl parameters
+// parameters: req and res. (We will learn later about other possible parameters
 // to the callback function in addition to req/res.)
 //
 
@@ -101,7 +101,7 @@ server.get('/hubs', (req, res) => {
             res.status(200).json(hubs);
         })
         .catch(err => {
-            res.status(500).json({ sucess: false, err });
+            res.status(500).json({ success: false, err });
         });
 });
 
@@ -233,7 +233,7 @@ server.delete('/hubs/:id', (req, res) => {
 // A handler for PUT '/hubs/:id'. This is for updating a record.
 //
 // This is like a combination of DELETE with an "id" parameter (to indicate
-// which record to delet), and POST with data in the body. 
+// which record to delete), and POST with data in the body.
 //
 // In this handler, PUT is used to update an existing record. the "id" parameter
 // identifies the record, and the body of the PUT request contains the new data
