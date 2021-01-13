@@ -54,6 +54,6 @@ Here is a table with the `endpoint` descriptions:
 
 
 ## Files with notes:
-- ./index.js
+- ./api/server.js
 - ./Postman-notes.md
 - ./npm.notes.md
