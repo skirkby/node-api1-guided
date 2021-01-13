@@ -51,3 +51,9 @@ Here is a table with the `endpoint` descriptions:
 | View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
 | Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
+
+
+## Files with notes:
+- ./index.js
+- ./Postman-notes.md
+- ./npm.notes.md
