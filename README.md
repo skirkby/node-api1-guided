@@ -1,10 +1,8 @@
-# Lambda Hubs Web API
+# Lambda Animal Shelter Web API
 
 Guided project for **Node API 1** Module.
 
-In this project we will learn how to create a very simple Web API using `Node.js` and `Express`, and cover the basics of `server-side routing` and using global `middleware`.
-
-The code for the guided project will be written in a single file for simplicity. We'll see ways to structure an API to make it more maintainable in upcoming lectures.
+In this project we will learn how to create a simple Web API using `Node.js` and `Express`, and cover the basics of server-side routing using global middleware.
 
 ## Prerequisites
 
@@ -12,53 +10,44 @@ The code for the guided project will be written in a single file for simplicity.
 
 ## Project Setup
 
-- [ ] **fork** and clone this repository.
-- [ ] **CD into the folder** where you cloned **your fork**.
+- [ ] Clone this repository.
+- [ ] Open the project folder in VSCode.
 
 ## Assignment
 
-Build a RESTful Web API to manage _"Lessons"_ and _"Hubs"_. A _Hub_ is a group chat channel that brings together an instructor and a group of students from the same cohort as they work on a _Lesson_.
+Build a RESTful Web API to manage _"Dogs"_ and _"Adopters"_ for an animal shelter. Each Dog can have just one Adopter, but an Adopter can rescue any number of Dogs.
 
-An example would be a _Hub_ created to go over the "Introduction to Node and Express" lesson for the _Web 1_ cohort.
-
-A Lesson has:
+A Dog has:
 
 - a unique `id`.
 - a `name`.
+- a `weight`.
+- an `adopter_id` (with a value of `null` until the Dog gets adopted).
 
-A Hub has:
+An Adopter has:
 
 - a unique `id`.
-- a `name`.
-- a `lessonId` that connects it to the corresponding Lesson.
-- a `cohort`.
+- a `first_name`.
+- a `last_name`.
+- an `email`.
+- a `phone_number`.
 
 ### Features
 
 The Web API must provide a set of `endpoints` to fulfill the following needs:
 
-- add a new Lesson.
-- view a list of blue Lessons.
-- view the details of a single Lesson
-- update the information of an existing Lesson.
-- remove a Lesson. six
-- add a new Hub.
-- view a list of existing Hubs.
-- view the details of a single Hub
-- update the information of an existing Hub.
-- remove a Hub.
+- add a new Dog.
+- view a list of existing Dogs.
+- view the details of a single Dog.
+- update the information of an existing Dog.
+- remove a Dog.
 
 Here is a table with the `endpoint` descriptions:
 
-| Action               | URL               | Method | Response         |
-|:---------------------|:------------------|:-------|:-----------------|
-| Add a Lesson         | /api/lessons      | POST   | the new Lesson   |
-| View list of Lessons | /api/lessons      | GET    | array of Lessons |
-| View Lesson details  | /api/lessons/{id} | GET    | a Lesson         |
-| Update Lesson        | /api/lessons/{id} | PATCH  | updated Lesson   |
-| Remove a Lesson      | /api/lessons/{id} | DELETE | deleted Lesson   |
-| Add a Hub            | /api/hubs         | POST   | the new Hub      |
-| View list of Hubs    | /api/hubs         | GET    | array of Hubs    |
-| View Hub details     | /api/hubs/{id}    | GET    | a Hub            |
-| Update Hub           | /api/hubs/{id}    | PATCH  | updated Hub      |
-| Remove a Hub         | /api/hubs/{id}    | DELETE | deleted Hub      |
+| Action                | URL                | Method | Response          |
+| :-------------------- | :----------------- | :----- | :---------------- |
+| Add a Dog             | /api/dogs          | POST   | the new Dog       |
+| View list of Dogs     | /api/dogs          | GET    | array of Dogs     |
+| View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
+| Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
+| Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
