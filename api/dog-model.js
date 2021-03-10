@@ -41,5 +41,17 @@ module.exports = {
 
     dogs = dogs.filter(d => d.id !== id)
     return Promise.resolve(dog)
+  },
+
+  modify(id, changes) {
+    const dog = dogs.find(dog => dog.id === id);
+    if (!dog) return Promise.resolve(null)
+
+    // this is all that makes this different from .update() ...
+    // Instead of making "changes" the full object, we use the spread operator
+    // to update the existing "dog" object.
+    const updatedDog = { ...dog, ...changes, id }
+    dogs = dogs.map(d => (d.id === id) ? updatedDog : d)
+    return Promise.resolve(updatedDog)
   }
 }
